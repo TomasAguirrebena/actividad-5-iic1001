@@ -1,6 +1,7 @@
 from abc import ABC
 import time as t
 
+# clase abstracta de pokemon
 class Pokemon(ABC):
 
     def __init__(self, name, level, type_):
@@ -26,11 +27,12 @@ class Pokemon(ABC):
         pass
 
     def __str__(self):
-        return f'{self.name} (Level {self.level}) - Type: {self.type_} - HP: {self.hp}/{self.max_hp}'
+        return f'{self.name} (nivel {self.level}) - tipo: {self.type_} - HP: {self.hp}/{self.max_hp}'
 
     def yell(self):
         print(f"{self.name}!")
-    
+
+# charmander!!! char char!!!
 class Charmander(Pokemon):
 
     def __init__(self, name, level):
@@ -42,7 +44,7 @@ class Charmander(Pokemon):
         self.name = name
     
     def attack(self):
-        return f"{self.name} used Flamethrower!"
+        return f"{self.name} uso Flamethrower!"
     
     def speak(self):
         print(f"Char! Char!")
@@ -50,6 +52,7 @@ class Charmander(Pokemon):
 char = Charmander("Charmander", 31)
 char.speak()
 
+# lo copie y pege mucho trabajo hacerlo desde 0
 print("Jessie: ¡Prepárense para los problemas!")
 print("James: ¡Y más vale que teman!")
 print("Jessie: Para proteger al mundo de la devastación.")
@@ -65,4 +68,4 @@ print("Meowth: ¡Meowth! ¡Así es!")
 char.yell()
 print(char.attack())
 
-print("el equipo rocket a sido vencidoooooo (otra vez)")
+print("el equipo rocket a sido vencidoooooo otra vez !!!!")
