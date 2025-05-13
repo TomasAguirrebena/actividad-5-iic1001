@@ -1,5 +1,4 @@
-from abc import ABC
-import time as t
+from abc import ABC, abstractmethod
 
 # clase abstracta de pokemon
 class Pokemon(ABC):
@@ -22,7 +21,8 @@ class Pokemon(ABC):
             self._hp = self.max_hp
         else:
             self._hp = value
-
+    # metodo abstracto para el ataque
+    @abstractmethod
     def attack(self):
         pass
 
